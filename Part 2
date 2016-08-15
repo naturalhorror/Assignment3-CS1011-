@@ -1,0 +1,37 @@
+<!DOCTYPE.html>
+<html>
+<head>
+<title> JavaScript Project 2</title>
+</head>
+<body>
+    
+<h5> <br> This is a computer rendering of the Mandelbrot Set.</h5>
+    </body>
+        <hr>
+      
+        <script type = text/javascript src="Mandelbrot.js"></script>
+       
+    <script>
+        var r = confirm("Do you wish me to draw the Mandelbrot set?");
+            if (r==true) 
+            
+            
+              
+            var p = prompt ("How many iterations (100-5000)", "100");
+               {     
+            if (p != null && p >0 && p<=5000) {
+        {            
+                Mandelbrot( 450,300, -2,1, -1,1, 100);
+                
+                document.write("<br/><br/><b>Mandelbrot Set using: " + p + " iterations</b>");
+            }
+    
+            } else { document.write("Nothing to see - User Declined");
+                    alert ("User declined the option \nof rendering the Mandelbrot Set");
+                    }
+                     }
+            
+        </script>
+        <hr> Author: [Enieda Baja]
+    
+</html> 
