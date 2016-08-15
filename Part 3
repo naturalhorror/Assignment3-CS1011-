@@ -1,0 +1,60 @@
+<!DOCTYPE.html>
+<html>
+<head>
+<title> JavaScript Project 3</title>
+</head>
+<body>
+<h2> <br>Tim Horton Sequence </h2>    
+  <hr>
+    <p> The Tim Horton Sequence a series of numbers where each value is twice of the preceeding number. <br> This will be now known as the 'Double Double'. <br> They will show the power of doubling: <br><br> This will show each step starting at the value of <b> ONE (1) times Two (2). </b></p>
+ 
+    <hr>
+  <script>
+        
+        function formatNumber(num) {
+return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") 
+        }
+    
+    var p = prompt ("Please enter the upper limit\n \nDo NOT exceed 30", "0");
+    
+        
+   if(p != null && p >0 && p<=30)
+   {
+        
+    document.write("<b>Sequence of numbers up to iteration number:</b> " + p + "<br/>" +"<br/>" );
+        
+        var wizard = 1;
+        var wand = 2;
+        var magic = 0;      
+        var runningTotal = 0;
+        for (var i = 1; i <= p; i++)  {
+        
+            if (i < 10) {
+            document.write ("<b> STEP " + i + ": </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"); 
+           
+          }
+         else 
+         { document.write ("<b> STEP " + i + ": </b>&nbsp;&nbsp;&nbsp;&nbsp;");       
+         }
+         magic = wizard * wand;
+    
+         document.write (formatNumber(wizard) + " * " + wand + " = " + formatNumber(magic) + "<br/>");   
+         wizard = magic;
+	runningTotal = runningTotal + magic/100;
+	document.write("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + ":"+ "CUMULATIVE" + ": " + "<b>$" + runningTotal.toFixed(2) + "</b><br/><br/>")
+	
+       }
+     }
+     else 
+     { 
+         document.write("User entered an invalid (out of range) value" );
+     }
+    </script>
+
+
+    <hr>
+    <h4> This is the end of the results. </h4>
+    
+    <p>Author: [Enieda Baja]</p>
+    </body>   
+</html>
